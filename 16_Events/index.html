@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Events</title>
+	<link rel="shortcut icon" href="../js.ico" type="image/x-icon">
+	<style>
+		.container {
+			max-width: 400px;
+			padding: 10px;
+			box-sizing: border-box;
+			background-color: lightskyblue;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.container div {
+			margin-bottom: 10px;
+		}
+
+		.box-1 {
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			background-color: deeppink;
+		}
+
+		.box-2 {
+			width: 100%;
+			height: 80px;
+			padding: 10px;
+			box-sizing: border-box;
+			background-color: salmon;
+		}
+
+		.box-3 {
+			width: 100%;
+			height: 120px;
+			box-sizing: border-box;
+			background-color: orange;
+			text-align: center;
+			font-size: 40px;
+			font-family: 'Comic Neue', sans-serif;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- <button onclick="this.innerHTML = new Date().toUTCString();">Show Date and Time</button> -->
+
+	<div class="container">
+		
+		<div class="box-1" onmouseover="myAnswer()" onmouseout="answer.innerHTML = ''">
+			<p id="question">Which you favorite languague?</p>
+			<ol>
+				<li>Java</li>
+				<li>JavaScript</li>
+				<li>Python</li>
+			</ol>
+		</div>
+
+		<div class="box-2">
+			<p id="answer"></p>
+		</div>
+
+		<div class="box-3" onmouseenter="this.innerHTML='Get off Me!🤨'" onmouseleave="this.innerHTML='Hi i\'m Juliao😋!'">
+			<p>Hi i'm Juliao😋!</p>
+		</div>
+
+	</div>
+	
+	<script src="myscript.js"></script>
+</body>
+</html>
