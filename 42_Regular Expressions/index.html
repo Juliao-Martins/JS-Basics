@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../js.ico" type="image/x-icon">
+	<title>JS Regular Expressions</title>
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo"></p>
+	
+	<script>
+		
+		const demo = document.getElementById('demo');
+
+		let words = "Hello, my name is 'Juliao'! i'm Juliao.",
+		x;
+
+		demo.innerHTML = words;
+
+		// The regular expressions are often use in JavaScript
+		// String method such as search() and replace() method!
+
+		// x = words.search("Juliao");
+		// /i or case-insensitive
+		// /g or global
+
+		// x = words.search(/JULIAO/i);
+		x = words.replace(/Juliao/g, "Ado");
+		// words = x.replace(/Ado/m, "jmRespect")
+
+		demo.innerHTML = x;
+		// demo.innerHTML = words;
+
+		x = /e/.test("Hello, World! and Hello, Again!");
+		console.log(x);
+
+		x = /e/.exec("Hello, World! and Hello, Again!");
+		console.log(x);
+
+	</script>
+</body>
+</html>
