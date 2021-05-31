@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Arrow Function</title>
+	<link rel="shortcut icon" href="../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+	
+	<script>
+		const demo = document.getElementById('demo');
+
+		// before
+		const first = function() {
+			return "Hello, World!";
+		};
+
+		// with arrow function
+		const sayHello = () => {
+			return "Hello, Again!";
+		};
+
+		// with parameter
+		// const sayHelloTo = (yourName) => {
+		// 	return "Hello, " + yourName;
+		// };
+
+		// without parenthese in parameter!
+		// NOTE: if you don't give a parameter when declared arrow function
+		// please give () parenthese if doesn't exists parameter
+		const sayHelloTo = yourName => {
+			return "Hello, " + yourName;
+		};
+
+		// console.log(sayHelloTo("Lynda"));
+
+		// without curly brackets
+		// NOTE: this is for only statement in arrow function not more!
+		const again = () => "Hello, Programmer!";
+		// console.log(again());
+
+		// best written 
+		// another example with arrow function
+		const addition = (number1, number2) => {
+			let total = number1 + number2;
+			return `${number1} + ${number2} = ${total}`;
+		};
+
+		const data1 = addition(50,28);
+		console.log(data1);
+		// demo.innerHTML = data1;
+
+		// use this keyword like Alone and function
+		// return global object [object window] 
+		const x = () => {
+			demo.innerHTML = this;
+		};
+
+		window.addEventListener('load', x);
+
+	</script>
+</body>
+</html>
