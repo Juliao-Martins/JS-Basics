@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS function aplly()</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+	
+
+	<script>
+		
+		const demo = document.getElementById('demo');
+
+		// The difference between call() and apply()
+		// the call() method takes arguments separtely.
+		// the apply() method takse arguments as an array.
+
+		const person = {
+			info : function(city, country) {
+				return `name\t: ${this.firstName} ${this.lastName}\ncountry\t: ${country}\ncity\t: ${city}`;
+			}
+		};
+
+		const person1 = {
+			firstName : "Juliao",
+			lastName : "Martins"
+		};
+
+		const person2 = {
+			firstName : "Evi",
+			lastName : "Angel"
+		};
+
+		const person1Info = person.info.apply(person1, ["Jakarta","Indonesia"]);
+		console.log(person1Info);
+
+		// Simulate Math object like 
+		// the call() and apply() method
+		console.log(Math.max.apply(Math, [3, 1.19, -5.1, 4, 0, 2]))	
+		console.log(Math.min(3, 1.19, -5.1, 4, 0, 2));
+
+	</script>
+</body>
+</html>
