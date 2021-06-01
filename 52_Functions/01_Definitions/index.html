@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Functions Definitions</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif }
+	</style>
+</head>
+<body>
+
+	<p id="demo" onclick="setLineTrough(this)">Hello, World!</p>
+	
+	<script>
+
+		const demo = document.getElementById('demo');
+		
+		/*
+		you can declare function with function keyword
+		
+		funcition functionName(parameters) {
+			// some statement
+		}
+		*/
+
+		function myFirst() {
+			return "Hello, World!";
+		};
+
+		// console.log(myFirst());
+		// console.log(myFirst());
+		// console.log(myFirst());
+		// console.log(myFirst());
+		// console.log(myFirst());
+
+		function divides(a, b) {
+			const c = a / b;
+			return `${a} / ${b} = ${c}`;
+		};
+
+		// variable can store function with return value!
+		const data1 = divides(9,4);
+		console.log(data1);
+
+		// function can be expression
+		// or anonymous function!
+		const mySecond = function() {
+			return "Hello, Again!";
+		};
+
+		const data2 = mySecond();
+		console.log(data2);
+
+		const multiplies = function(number1, number2) {
+			const total = number1 * number2;
+			return `${number1} * ${number2} = ${total}`;
+		};
+
+		const data3 = multiplies(7,7);
+		// console.log(data3);
+		demo.textContent = data3;
+
+		// anonymous self-invoking
+		// or function called it-self with () parentheses!!
+		(function subtracts(a, b) {
+			demo.innerHTML = `${a} - ${b} = ${a - b}`;
+		})(10,5);
+
+		// (function x() {
+		// 	alert("Hello, Timor-Leste!");
+		// })();
+
+		// function are hoisting
+		// but you declare function like expression or 
+		// arrow function they are constants value!
+		// initialize before use!
+
+		// function are hoisting
+		// modulos(10,3);
+
+		function modulos(a, b) {
+			alert(`${a} % ${b} = ${a%b}`);
+		};
+
+		// arrow function
+		const third = name => {
+			return "Hello, " + name + "!";
+		};
+
+		const data5 = third("Juliao");
+		demo.textContent = data5;
+
+		const sum = (number1, number2) => {
+			return number1 + number2;
+		};
+
+		const data6 = sum(10,90000.5);
+		console.log(data6);
+
+		const setLineTrough = el => {
+			el.style.textDecoration = "line-through";
+		};
+
+	</script>
+</body>
+</html>
