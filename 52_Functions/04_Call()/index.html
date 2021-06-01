@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Function call()</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+	
+	<script>
+		
+		const person = {
+			fullName : function(city, country) {
+				return `name\t: ${this.firstName} ${this.lastName}\ncountry\t: ${country}\ncity\t: ${city}`;
+			}
+		};
+
+		const person1 = {
+			firstName	: "Johny",
+			lastName	: "Oz"
+		};
+
+		const person2 = {
+			firstName 	: "Helena",
+			lastName 	: "Mendez"
+		};
+
+		// const person1Name = person.fullName.call(person1);
+		// console.log(person1Name);
+
+		const person2Info = person.fullName.call(person2, "Dili", "Timor-Leste");
+		console.log(person2Info);
+
+	</script>
+</body>
+</html>
