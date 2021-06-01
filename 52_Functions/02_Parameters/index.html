@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Function Parameters</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+	
+	<script>
+		
+		/*
+			function with parameters
+
+			function functionName(parameter1, parameter2, parameter3, parameter4) {
+				// some statement!
+			}
+
+			parameter are name listed when declare the function.
+			argument are value when received in funnction , argument without value will be undefined!
+		*/
+
+		// function divides(a, b) {
+		// 	if(b === 0 || b === undefined) {
+		// 		console.warn("can't divided by\nzero or undefined value!");
+		// 	} else {
+		// 		const c = a / b;
+		// 		return c;
+		// 	};
+		// };
+
+		// or with ES5, default parameters
+		// function divides(a, b=1) {
+		// 	return a / b;
+		// };
+
+		// with function length property and toString() method
+		function x() {
+			return arguments.length;
+		};
+
+		// console.log(x(1,2,3,4,5,6));
+		// console.log(x.toString());
+
+		function findMax() {
+			let i;
+			let max = -Infinity;
+			for(i = 0; i < arguments.length; i++) {
+				if(arguments[i] > max) {
+					max = arguments[i];
+				};
+			};
+			return max;
+		};
+
+		const data1 = findMax(100, 200, 9.111, -2.11, 0.5);
+		console.log(data1);
+
+		function sum() {
+			let i;
+			let total = 0;
+			for(i = 0; i < arguments.length; i++) {
+				total += arguments[i];
+			};
+			return total;
+		};
+
+		const data2 = sum(1, 2, 3, 4, 5, 23);
+		console.log(data2);
+
+	</script>
+</body>
+</html>
