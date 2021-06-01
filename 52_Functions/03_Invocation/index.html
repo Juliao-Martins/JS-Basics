@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Function Invocation</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+	
+	<script>
+
+		const demo = document.getElementById('demo');
+		
+		// The code inside JavaScript function will execute when "something" invokes it.
+
+		function multiplies(a, b) {
+			return a * b;
+		};
+
+		// console.log(multiplies(5,4)); // return 20;
+		console.log(window.multiplies(5,4)); // also return 20
+
+		// this keyword with function invocation
+		function x() {
+			return this;
+		};
+
+		// console.log(x());		// return [window object]
+		// console.log(window.x());	// also return [window object]
+
+		// this keyword function as method
+		const person = {
+			firstName : "Jaime",
+			lastName : "Soares",
+			age : 20,
+			name : function() {
+				return this;
+			}
+		};
+
+		console.log(person.name());	
+		demo.innerHTML = person.name(); // return [object object] meant owner of object
+
+		// invoking function with a function constructor
+		function player(name, health) {
+			this.name = name;
+			this.health = health;
+		};
+
+		const p1 = new player("James",98.2);
+		const p2 = new player("Mausesta",99.5);
+
+		console.log(p2.name);
+
+	</script>
+</body>
+</html>
