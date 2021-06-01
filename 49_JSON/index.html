@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScrit JSON</title>
+	<link rel="shortcut icon" href="../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+	
+	<script>
+		
+		let txt = `[
+		{
+			"firstName":"John",
+			"lastName":"Doe"
+		},
+		{
+			"firstName":"Lary",
+			"lastName":"Mendez"
+		},
+		{
+			"firstName":"Jaime",
+			"lastName":"Oz"
+		}
+		]`;
+
+		var obj = JSON.parse(txt);
+
+		console.log(obj[1].firstName);
+
+	</script>
+</body>
+</html>
