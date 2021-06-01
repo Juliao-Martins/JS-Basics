@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS function closures</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+
+		div {
+			max-width: 50vmax;
+			height: 180px;
+			margin: 50px auto;
+			background-color: #C0C0C0;
+			box-shadow: 1px 1px 1px #878282;
+			display: flex;
+			flex-direction: column;
+		}
+
+		p#demo {
+			font-size: 16px;
+			margin: auto;
+		}
+
+		button {
+			margin: auto;
+		}
+
+		@media (min-width: 300px) {
+			
+			div {
+				height: 300px;
+			}
+
+			p#demo {
+				font-size: 36px;
+			}
+
+		}	
+	</style>
+</head>
+<body>
+
+	<div>
+		<p id="demo">Hello, World!</p>
+		<button onclick="add()">Click Me</button>
+	</div>
+	
+	<script>
+
+		const demo = document.getElementById('demo');
+		
+		// counter dilema
+
+		// local scope
+		// function myFunction() {
+		// 	let a = 5;
+		// 	return a * a;
+		// };
+
+		// global scope
+		// let a = 5;
+		// function myFunction() {
+		// 	return a * a;
+		// };
+
+		let counter = 0;	// global scope!
+
+		function add() {
+			// let counter = 0; // local scope! will reset to zero again!
+			counter ++;
+			demo.innerHTML = `Hello, ${counter}!`;
+			return counter;
+		}
+
+		// nested function
+		// function add() {
+		// 	let counter = 0;
+		// 	function plus() { counter++; }
+		// 	plus();
+		// 	demo.innerHTML = `Hello, ${counter}!`;
+		// 	return counter;
+		// }
+
+	</script>
+</body>
+</html>
