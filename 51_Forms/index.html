@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Forms</title>
+	<link rel="shortcut icon" href="../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<form action="" name="myForm" method="post">
+		<label for="my-password">Password</label>
+		<input type="password" name="" id="my-password">
+		<br>
+		<button onclick="processIt()">Regist</button>
+	</form>
+	
+	<script>
+		
+		const myPassword = document.forms["myForm"]["my-password"];
+
+		const processIt = () => {
+			let x = myPassword.value;
+			if(x === "" || x.length === 0) {
+				alert("is empty!");
+			} else {
+				if(x.length >= 8) {
+					alert("success to regist!");
+				} else {
+					alert("password must be 8 characters!");
+				};
+			};
+		};
+
+	</script>
+</body>
+</html>
