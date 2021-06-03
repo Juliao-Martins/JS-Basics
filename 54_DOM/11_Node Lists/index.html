@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS DOM Node Lists</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif }
+	</style>
+</head>
+<body>
+
+	<h1 id="myH">My Heading</h1>
+	<p>Hello, World!</p>
+	<p>Hello, Again!</p>
+	<p>Life same as execute code!</p>
+	<p id="copy">&copy; 2021</p>
+	
+	<script>
+		
+		// A NodeList is almost the same as an HTMLCollection object.
+		// Most browsers returns a NodeList object for the method querySelectorAll()
+		// note: access by numbered index element[0] is start with 0.
+
+		const p = document.querySelectorAll('p');
+		console.log(p);			// return NodeList
+
+		const allEl = document.querySelectorAll("#myH, #copy");
+		console.log(allEl);		// return NodeList
+
+		// let i = 0;
+		// let len = p.length;
+		// for(; i < len; i++) {
+		// 	p[i].innerText = "Hello, paragraph " + i + "!";
+		// };
+
+		for(let i in allEl) {
+			allEl[i].innerHTML = "Hello, index <b>" + i + "</b>!";
+		};
+
+	</script>
+</body>
+</html>
