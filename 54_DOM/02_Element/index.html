@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS DOM Element</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<!-- <p>Hello, World!</p> -->
+	<!-- <p class="myP"></p> -->
+	<p id="para">Hello, World!</p>
+	<p class="para2">it's timor Developer!</p>
+	
+	<script>
+		
+		/*
+			All DOM method to find an element HTML
+			getElementById()
+			getElementsByTagName()
+			getElementsByClassName()
+			querySelector()
+			querySelectorAll()
+			etc...
+
+			but you are written with prefix document else return an error!
+
+			if element found will return the element, if not found will return null
+
+			the property to change an element content
+			innerHTML
+			innerText
+			textContent
+		*/
+
+		// find an html element
+		// const p = document.getElementsByTagName("p");
+		// p[0].innerHTML = "word is change!";
+
+		// find an html element with class name
+		// const myP = document.getElementsByClassName('myP')[0];
+		// myP.innerText = "Hello, Programmer!";
+
+		// find an html element with id name
+		// const para = document.getElementById('para');
+		// para.textContent = "Hello, Again!";
+
+		// find an html element with css selector name
+		// const para = document.querySelector("#para");
+		// para.innerHTML = "life to code!";
+
+		// or try with querySelectorAll()
+		const myEl = document.querySelectorAll("#para, .para2");
+		myEl[0].innerHTML = "my paragraph 1.";
+		myEl[1].innerHTML = "my paragraph 2.";
+
+	</script>
+</body>
+</html>
