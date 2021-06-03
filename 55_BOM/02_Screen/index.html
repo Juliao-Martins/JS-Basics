@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Screen</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+	
+	<script>
+		
+		// the window.screen object contains information about the user's screen.
+
+		// you can all properties in window.screen object with
+		// console.log(window.screen);
+
+		// you can written without window prefix
+		const demo = document.getElementById('demo');
+
+		// demo.innerHTML = screen.width;			// return 1366
+		// demo.innerHTML = screen.height;			// return 768
+		// demo.innerHTML = screen.availWidth;		// return 1366
+		// demo.innerHTML = screen.availHeight;		// return 728
+		// demo.innerHTML = screen.colorDepth;		// return 24
+		demo.innerHTML = screen.pixelDepth;			// return 24
+
+	</script>
+</body>
+</html>
