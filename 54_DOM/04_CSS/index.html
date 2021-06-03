@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS DOM CSS</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, JavaScript!</p>
+
+	<button onclick="changeFont()">Click Me</button>
+	
+	<script>
+		
+		/*
+			DOM CSS
+			document.getElement...().style.cssproperty = cssvalue;
+
+			to even better you can use event work with DOM CSS!
+		*/
+
+		const demo = document.getElementById('demo');
+
+		// you can see all css property with DOM in browser console
+		console.log(demo.style);
+
+		demo.style.fontSize = "32px";
+
+		// demo.style.fontFamily = "serif";
+		// demo.style.textDecoration = "line-through";
+
+		// or you can use attribute style to css style
+		// demo.style = "font-family: serif; text-decoration: overline;";
+
+		// or using setAttribute() method
+		// to set attribute style and css property
+		// demo.setAttribute("style", "font-family:Arial, Consolas, sans-serif; text-decoration: underline;");
+
+		const allFont = ["Arial", "Consolas", "Times New Roman", "Cooper Black", "Jokerman Regular"];
+		let count = 0;
+		function changeFont() {
+			if(count > (allFont.length-1)) count = 0;
+			demo.style.fontFamily = allFont[count];
+			count ++;
+		};
+
+	</script>
+</body>
+</html>
