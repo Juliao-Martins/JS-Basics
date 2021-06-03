@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS DOM Collections</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif }
+	</style>
+</head>
+<body>
+
+	<p>Hello, World!</p>
+	<p>Hello, Again</p>
+	<p>computer program it teaches you how to think.</p>
+	
+	<script>
+		
+		// the document.getElementsByTagName() 
+		// return HTMLCollection
+		// HTMLCollection access the element with numbered indexes element[numbered]
+		// HTMLCollection is look like an array but is not array
+		const p = document.getElementsByTagName('p');
+		console.log(p);
+
+		const x = p[0];
+		x.innerHTML = "East Timor! 'Developer'";
+
+		// or you can quickly using for loop
+		let i = 0;
+		let len = p.length;
+		for(; i < len; i++) {
+			p[i].innerHTML = "this is paragraph " + i + "!";
+		};
+
+		// AGAIN: HTMLCollection is look like an array but is not an array!
+
+	</script>
+</body>
+</html>
