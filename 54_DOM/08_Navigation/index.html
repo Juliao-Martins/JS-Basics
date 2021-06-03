@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS DOM Navigation</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<h1 id="myH">Learn DOM Nagivation!</h1>
+	<p id="myP">all element in html is child and parent is <b>html</b></p>
+
+	<script>
+		
+		/*
+			use can use this nodes in JavaScript code!
+			parentNode
+			childNodes[indexes number]
+			firstChild
+			lastChild
+			nextSibling
+			previousSibling
+
+			node value and name
+			nodeValue	=> return content of element
+			nodeName	=> return name of element
+		*/
+
+		// find element <head> and <body>
+		const head = document.head,
+		body = document.body;
+
+		const headParent = head.parentNode.nodeName;
+		console.log("the <head> parent is " + headParent); // the parent of head is html and will return 
+
+		const bodyParent = body.parentNode.nodeName;
+		console.log("the <body> parent is " + bodyParent); // the parent of body also is html and will return html
+
+		// find the child of head
+		const childHead = head.firstElementChild.nodeName;
+		console.log(childHead); // return meta
+
+		// find the first child of body
+		const childBody = body.firstElementChild.nodeName;
+		console.log(childBody);
+
+		// find my element with id 'myH' and 'myP'
+		const myH = document.getElementById('myH'),
+		myP = document.getElementById('myP');
+
+		console.log(myH.firstChild.nodeValue);
+
+		console.log(myP.firstChild);
+		console.log(myP.firstChild.nodeName);
+		console.log(myP.lastChild);
+		console.log(myP.lastChild.nodeName);
+
+		// or you can see all element tag
+		// with document.documentElement
+		alert(document.documentElement.innerHTML);
+
+	</script>
+</body>
+</html>
