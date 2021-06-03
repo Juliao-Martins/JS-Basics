@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS BOM Window</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+
+	<button onclick="window.open('https://www.youtube.com/')">go to Youtube!</button>
+	<!-- <button onclick="window.close()">cloose this page!</button> -->
+	
+	<script>
+		
+		window.addEventListener('resize', () => {
+			const w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+			const h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+			window.document.getElementById('demo').innerHTML = `width : ${w}<br>height : ${h}`;
+		});
+
+		
+
+	</script>
+</body>
+</html>
