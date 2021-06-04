@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS BOM Navigator</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+	
+	<script>
+		
+		// The window.navigator objects contains information about the visitor's browser.
+
+		const demo = document.getElementById('demo');
+
+		// you can see all properties and method in window.navigator object
+		// console.log(window.navigator);
+		// demo.innerHTML = "app name is " + window.navigator.appName;
+		// demo.innerHTML = "app code name is " + window.navigator.appCodeName;
+		// demo.innerHTML = "app version is " + window.navigator.appVersion;
+		// demo.innerHTML = "cookie enable is " + window.navigator.cookieEnabled;
+		// demo.innerHTML = "vendor is " + window.navigator.vendor;
+		// demo.innerHTML = "platform is " + window.navigator.platform;
+		// demo.innerHTML = "languague is " + window.navigator.language;
+		// demo.innerHTML = "java enable is " + window.navigator.javaEnabled();
+		// demo.innerHTML = "user activation is " + window.navigator.userActivation.isActive;
+		demo.innerHTML = "browser is online (" + window.navigator.onLine + ")";
+
+	</script>
+</body>
+</html>
