@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS BOM Location</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<p id="demo">Hello, World!</p>
+
+	<button onclick="window.location.assign('../02_Screen/index.html')">load new document!</button>
+	
+	<script>
+
+		const demo = document.getElementById('demo');
+
+		// The window.location object can be used to get current
+		// page address (URL) and redirect the browser to a new page.
+		
+		// demo.innerHTML = window.location.href;
+		// demo.innerHTML = window.location.hostname;
+		// demo.innerHTML = window.location.pathname;
+		// demo.innerHTML = window.location.protocol;
+		// demo.innerHTML = window.location.port;
+		// load new document with location.assign() method
+
+		// you can see all properties and methods in window.location with
+		console.log(window.location);
+
+	</script>
+</body>
+</html>
