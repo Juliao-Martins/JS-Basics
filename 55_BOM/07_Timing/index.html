@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS BOM Timing</title>
+	<link rel="shortcut icon" href="../../js.ico" type="image/x-icon">
+	<style>
+		body { font-family: "Comic Neue", sans-serif; }
+	</style>
+</head>
+<body>
+
+	<!-- <button onclick="x = setTimeout(myFunction, 3000)">Click</button>
+	<button onclick="clearTimeout(x)">Stop It!</button> -->
+
+	<p id="demo"></p>
+	<button onclick="clearInterval(x)">Stop It!</button>
+
+	<script>
+
+		const demo = document.getElementById('demo');
+
+		const x = setInterval(myFunction, 1000);
+
+		function myFunction() {
+			let d = new Date();
+			demo.innerHTML = d.toLocaleTimeString();
+		};
+		
+	</script>
+</body>
+</html>
